@@ -1,0 +1,90 @@
+<template>
+  <div>
+    <body background="/static/BackGround/bk28.jpg">
+    <el-button icon="el-icon-back" v-on:click="handleCard('AllDepintro')"></el-button>
+      <el-card :body-style="{ padding: '0px' }"  class="card" >
+        <div>
+          <section>
+              <h3>部门简介</h3>
+              <span>
+                  分团委组织部负责全院团员的思想建设、组织建设、以及各项团务工作。积极策划开展各种团员活动，丰富团员的生活，加强团员的思想教育。<br>
+              </span>
+          </section>
+          <section>
+              <h3>主要职能</h3>&emsp;
+              <ul>
+                  <li>策划开展特色团日以及主题团会活动</li>
+                  <li>组织第三赛区特团答辩活动</li>
+                  <li>组织五四演讲比赛以及五四评优活动</li>
+                  <li>参与并组织分团委、学生会的人事安排调动工作</li>
+                  <li>负责团组织关系转接、团员信息统计以及团费收缴工作</li>
+                  <li>组织各年级团总支书记、基层团支部书记的培训以及配合校团委组织的各项工作在院系内部的开展。</li>
+              </ul>
+          </section>
+	    </div>
+      <p>More Messages --<a href="http://mp.weixin.qq.com/s?__biz=MzA5Mjk1OTM2OA==&mid=2652256192&idx=1&sn=ae1182a54ab381642562eb3a4475d8ba&chksm=8b87b027bcf03931460df320c4fa05eebcf19509ed23fd804af093b30b5d80d26e9f53605bb8&mpshare=1&scene=23&srcid=08291p7vOfC70VFa9taBY4Lp#rd" 
+          target="_blank" >组织部部门介绍</a></p>
+      </el-card>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </body>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "display",
+    methods: {
+      handleCard:function (key) {
+        switch (key) {
+          case 'AllDepintro':
+            this.$router.push('/AllDepintro');
+            break;
+          default:
+            this.$router.push('/Home');
+        }
+        console.log(key)
+      }
+  }
+  }
+</script>
+
+<style scoped>
+  .card{
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
+  }
+
+  @media all and (min-width: 330px)and (max-width: 420px){
+    .card{
+      border-radius: 10px;
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media all and (min-width: 420px)and (max-width: 800px){
+    .card{
+      border-radius: 20px;
+      margin-left: 35px;
+      margin-right: 35px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media all and (min-width: 800px){
+    .card{
+      border-radius: 20px;
+      margin-left: 60px;
+      margin-right: 60px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+</style>

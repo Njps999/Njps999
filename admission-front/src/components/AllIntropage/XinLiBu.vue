@@ -1,0 +1,89 @@
+<template>
+  <div>
+    <body background="/static/BackGround/bk28.jpg">
+    <el-button icon="el-icon-back" v-on:click="handleCard('AllDepintro')"></el-button>
+      <el-card :body-style="{ padding: '0px' }"  class="card" >
+        <div>
+            <section>
+                <h3>部门简介</h3>
+                  <span>
+                      学生会的宗旨是服务广大学子，为学生谋利，心理部更是共青团“校、院、班三级联动工作格局“的忠实执行者，隶属于电信学院分团委的同时，也负责协助校学<br>
+                      生会心理部和大学生发展研究与指导中心的工作，可以说，心理部是电信学院分团委各部门中，与校学生会和各个班级联系最紧密的部门。
+                  </span>
+            </section>
+            <section>
+                <h3>主要工作</h3>&emsp;
+                  <span>
+                        心理部是大家的心灵鸡汤，每年都会在校会心理部的组织下开展“新生工作坊“、“心理月文化节”、“心理健康教育进班级”等大型跨院系系列活动，与人文，<br>
+                        境等院系心理部合作关系友好，如在刚过去的这个学期协同开展了“守护天使”活动，我们还负责联系各班的心理委员，按月收集整理晴雨表，关爱学生心理健康。<br>
+                        另个，我们于23栋和5栋宿舍各置了心理宣泄墙，拟与QQ公众号配合运营。 我们是柔和的轻风，带走你眉梢的烦恼，我们是心灵的鸡汤，温暖你纯真的心房！欢迎加<br>
+                        入电信学院心理部，我们愿做你的心灵港湾！
+                  </span>
+            </section>
+	      </div><br/>
+        <p>More Messages --<a href="http://mp.weixin.qq.com/s?__biz=MzA5Mjk1OTM2OA==&mid=2652256158&idx=1&sn=1b20957afda6e34191c31e19a7a1c3e1&chksm=8b87b079bcf0396fe2ec1ae888191db20798766e26cfffc49b1839856e690eb56df4d22f5424&mpshare=1&scene=23&srcid=0829NjPTsmQl7ePT9oEhgUwI#rd" 
+          target="_blank" >心理部部门介绍</a></p>
+      </el-card>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </body>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "display",
+    methods: {
+      handleCard:function (key) {
+        switch (key) {
+          case 'AllDepintro':
+            this.$router.push('/AllDepintro');
+            break;
+          default:
+            this.$router.push('/Home');
+        }
+        console.log(key)
+      }
+  }
+  }
+</script>
+
+<style scoped>
+  .card{
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
+  }
+
+  @media all and (min-width: 330px)and (max-width: 420px){
+    .card{
+      border-radius: 10px;
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media all and (min-width: 420px)and (max-width: 800px){
+    .card{
+      border-radius: 20px;
+      margin-left: 35px;
+      margin-right: 35px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media all and (min-width: 800px){
+    .card{
+      border-radius: 20px;
+      margin-left: 60px;
+      margin-right: 60px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+</style>
